@@ -1,0 +1,466 @@
+[common]
+exten => _900XXXXXX,1,Wait(${EXTEN:3:2})
+exten => _900XXXXXX,2,Dial(SIP/${EXTEN:5},,tT)
+
+
+[in-ua_asterisk]
+include => org2 
+include => test 
+exten => 500,1,NoOp()
+ same => n,Answer()
+ same => n,Playback(beep)
+ same => n,Echo()
+ same => n,HangUp()
+
+
+[zadarma-in]
+exten => 74993467322,1,NoOp()
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993466368,1,NoOp()
+; rebatez 
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993466361,1,NoOp()
+; imedics
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993468696,1,NoOp()
+; turbosuper
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993468335,1,NoOp()
+; predmetotvet
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993468129,1,NoOp()
+; bisnesmedia
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993467723,1,NoOp()
+; drclinic
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993467657,1,NoOp()
+; omron
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+
+exten => 74996772412,1,NoOp()
+; pult
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+  same => n,Playback(beep)
+ same => n,HangUp()
+
+
+exten => 74994031882,1,NoOp(); medzal
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+
+exten => 74994033763,1,NoOp()
+; wodichka
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+
+exten => 74996772324,1,NoOp()
+; medtovay
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+
+exten => 74994033961,1,NoOp()
+; intelimed
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+ same => n,Dial(SIP/2011&SIP/2012,30,m)
+; same => n,Dial(SIP/2006&SIP/2008,15,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+
+exten => 74994033739,1,NoOp()
+; miks
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+;same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2006&SIP/2008,15,m)
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74993466857,1,NoOp()
+; msmag
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Ringing()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Queue(group-msk,,,/home/aster-x/sound/msmag_74993466857,60)
+; same => n,Queue(group-ua,,,/home/aster-x/sound/msmag_74993466857,600)
+ same => n,Dial(SIP/2006&SIP/2008,15,m(bm))
+ same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,600,m(bm)A(/home/aster-x/sound/msmag_74993466857))
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74994031931,1,NoOp()
+; kiseleva
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Goto(test,79037593399,1)
+
+ same => n,Dial(SIP/2007,120,m(bm)A(/home/aster-x/sound/bizness_media_74993468129))
+ same => n,Dial(SIP/2006&SIP/2008,15,m(bm))
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+; same => n,Dial(SIP/2001&SIP/2002&SIP/2003&SIP/2004&SIP/2005,10,m)
+; same => n,Dial(SIP/2005&SIP/2006&SIP/2007&SIP/2008&SIP/2009&SIP/2010,60,m)
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+exten => 74994033539,1,NoOp()
+; kiseleva opt
+; same => n,Macro(prostie-zvonki)
+ same => n,Answer()
+ same => n,Wait(1)
+; same => n,Playback(/home/aster-x/sound/bm-privet)
+; same => n,Dial(SIP/2001&SIP/2002&Local/900052005@common,,m)
+ same => n,Dial(SIP/2007,120,m(bm)A(/home/aster-x/sound/opt_bizness_media_74994033539))
+ same => n,Playback(beep)
+ same => n,HangUp()
+
+
+[out-msk]
+exten => _749[59]xxxxxxx,1,macro(zadarmaout,${exten})
+exten => 4444,1,Macro(zadarmaout,${EXTEN})
+
+[out-ru]
+exten => _7XXXXXXXXXX,1,Macro(zadarmaout,${EXTEN})
+
+exten => _79XXXXXXXXX,1,NoOp()
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-3,%Y-%m,180000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,180000,8${EXTEN:1}))
+; same => n(sim1),Gosub(subDial_1,s,1,(dinstar-msk-0,%Y-%m,180000,8${EXTEN:1}))
+ same => n(end),Hangup
+
+[out-ua]
+exten => _3XXXXXXXXXX,1,Macro(zadarmaout,${EXTEN})
+
+
+
+[users-context]
+exten => 1001,1,NoOp(=== ${EXTEN} =========)
+ same => n,Dial(SIP/ivanov)
+exten => 1002,1,NoOp(=== ${EXTEN} =========)
+ same => n,Dial(SIP/petrov)
+
+
+
+[org]
+exten => _1XXX,1,NoOp(=== ${EXTEN} =========)
+ same => n,Dial(LOCAL/${EXTEN}@users-context)
+
+exten => _2XXX,1,NoOp(=== ${EXTEN} =========)
+ same => n,Dial(SIP/${EXTEN})
+ same => n,Dial(SIP/${EXTEN}a)
+ same => n,Set(CID=${CALLERID(num)})
+ same => n,Set(CALLERID(num)=msk${CID})
+ same => n,Dial(SIP/asterisk-ua/${EXTEN})
+
+[org2]
+exten => _2XXX,1,NoOp(=== ${EXTEN} =========)
+ same => n,Dial(SIP/${EXTEN})
+
+[out-all]
+include => org
+include => test 
+;include => test2
+include => out-msk
+
+[out-4user1]
+include => org
+include => test 
+include => out-msk
+include => out-ua
+include => out-ru
+
+[macro-zadarmaout]
+exten => s,1,NoOp()
+ same => n,Dial(SIP/zadarma/${ARG1})
+; same => n,Dial(SIP/zadarma2/${ARG1})
+; same => n,Dial(SIP/zadarma3/${ARG1})
+
+[default]
+;------------------------
+[test2]
+exten => _+7XXXXXXXXXX,1,NoOp()
+ same => n,Goto(${EXTEN:1},1)
+
+exten => _8XXXXXXXXXX,1,NoOp()
+ same => n,Goto(7${EXTEN:1},1)
+
+exten => _7XXXXXXXXXX,1,macro(zadarmaout,${EXTEN})
+
+[test]
+exten => 3000,1,NoOp()
+ same => n,Macro(prostie-zvonki)
+ same => n,Dial(SIP/2001&SIP/2002)
+
+exten => _205XX,1,Wait(2)
+exten => _205XX,n,Record(/tmp/asterisk-recording${EXTEN:3}:wav)
+exten => _205XX,n,Wait(1)
+exten => _205XX,n,Playback(/tmp/asterisk-recording${EXTEN:3})
+exten => _205XX,n,Wait(2)
+exten => _205XX,n,Hangup
+
+exten => _206XX,1,Wait(1)
+exten => _206XX,n,Playback(/tmp/asterisk-recording${EXTEN:3})
+exten => _206XX,n,Wait(1)
+exten => _206XX,n,Hangup
+
+exten => _+7XXXXXXXXXX,1,NoOp()
+ same => n,Goto(${EXTEN:1},1)
+
+exten => _8XXXXXXXXXX,1,NoOp()
+ same => n,Goto(7${EXTEN:1},1)
+
+exten => _749[59]XXXXXXX,1,NoOp();МОСКВА СТАЦИОНАРНЫЕ
+; same => n,Gosub(subDial_addpac,s,1,(8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ same => n(end),Hangup
+
+exten => _79[18]xXXXXXXX,1,NoOp();МТС
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-0,%Y-%m-%d,85,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ same => n(end),Hangup
+
+exten => _790[3569]XXXXXXX,1,NoOp();БИЛАЙН
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-1,%Y-%m-%d,85,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+
+exten => _7976XXXXXXX,1,NoOp();БИЛАЙН
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-1,%Y-%m-%d,85,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ same => n(end),Hangup
+
+exten => _796[0-8]XXXXXXX,1,NoOp();БИЛАЙН-РОССИЯ
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-1,%Y-%m-%d,85,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-0,%Y-%m,85,8${EXTEN:1}))
+ same => n(end),Hangup
+
+exten => _79[23]XXXXXXXX,1,NoOp();МЕГАФОН
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n(end),Hangup
+
+exten => _73822900270,1,NoOp();МЕГАФОН
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ ;ame => n,Gosub(subDial_1,s,1,(dinstar-msk-3,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n(end),Hangup
+
+exten => _79xxxXXXXXX,1,NoOp();ОСТАВШИЕСЯ МОБИЛЬНЫЕ  РОССИЯ
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n(end),Hangup
+
+exten => _7xxxxXXXXXX,1,NoOp();ОСТАВШИЕСЯ СТАЦИОНАРНЫЕ
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-4,%Y-%m,1000,8${EXTEN:1}))
+ same => n,Gosub(subDial_1,s,1,(dinstar-msk-2,%Y-%m-%d,85,8${EXTEN:1}))
+ same => n(end),Hangup
+
+
+exten => 100,1,NoOp()
+ same => n,Playback(beep)
+ same => n,Echo()
+
+exten => 200,1,NoOp()
+ same => n,Gosub(subDial_addpac,s,1,(89138245297))
+
+exten => 331,1,NoOp()
+ same => n,Dial(SIP/goip4-uk-4/40079138245297)
+
+exten => _+38XXXXXXXXXX,1,NoOp()
+ same => n,Dial(SIP/dinstar-uk-0/${EXTEN:3})
+ same => n,Dial(SIP/goip4-uk-4/4${EXTEN:3})
+
+exten => _+38050XXXXXXX,1,NoOp()
+ same => n,Dial(SIP/dinstar-uk-1/${EXTEN:3})
+
+exten => _+3809[59]XXXXXXX,1,NoOp()
+ same => n,Dial(SIP/dinstar-uk-1/${EXTEN:3})
+
+exten => _+38066XXXXXXX,1,NoOp()
+ same => n,Dial(SIP/dinstar-uk-1/${EXTEN:3})
+
+
+[subDial_1]
+exten => s,1,NoOp()
+ same => n,Set(CCHAN=${ARG1})
+ same => n,Set(TDATE=${ARG2})
+ same => n,Set(LIMIT=${ARG3})
+ same => n,Set(PHONE=${ARG4})
+ same => n,Gotoif($[${DB(${CCHAN}/date)}  =  ${STRFTIME(${EPOCH},,${TDATE})}]?next)
+   same => n,Set(DB(${CCHAN}/date)=${STRFTIME(${EPOCH},,${TDATE})})
+   same => n,Set(DB(${CCHAN}/ans_time)=0)
+ same => n(next),NoOp(${STRFTIME(${EPOCH},,${TDATE})})
+ same => n,Gotoif($[ ${DB(${CCHAN}/ans_time)} >= ${LIMIT} ]?end)
+   same => n,Dial(SIP/${CCHAN}/${PHONE})
+   same => n,NoOp(----DIALSTATUS---- ${DIALSTATUS} ------)
+   same => n,Gotoif($[${DIALSTATUS} = CONGESTION]?end:sim1_1)
+   same => n(sim1_1),Gotoif($[${DIALSTATUS} = CHANUNAVAIL]?end:sim1_2)
+   same => n(sim1_2),Gotoif($[${DIALSTATUS} = BUSY]?hangup:end)
+   same => n(hangup),Hangup
+ same => n(end),Return()
+
+
+
+exten => h,1,NoOp(${CCHAN}-${DIALSTATUS}-${ANSWEREDTIME})
+ same => n,Set(M=${ANSWEREDTIME})
+ same => n,Set(X=${IF(${MATH(${M}%60,int)}?$[${MATH(${M}/60,int)} + 1]:${MATH(${M}/60,int)})})
+ same => n,Gotoif($[${DIALSTATUS} != ANSWER ]?end)
+   same => n,Set(DB(${CCHAN}/ans_time)=$[${DB(${CCHAN}/ans_time)} +  ${X}])
+ same => n(end),NoOp()
+
+
+[subDial_addpac]
+exten => s,1,NoOp()
+ same => n,Set(PHONE=${ARG1})
+ same => n,Dial(SIP/addpac-msk/3002,,D(w${PHONE}))
+ same => n(end),Return()
+
+[messages]
+exten => _2XXX,1,NoOp()
+ same => n,NoOp(---- from: ${MESSAGE(from)} body: ${MESSAGE(body)})
+ same => n,HangUp()
+
+exten => _12XXX,1,NoOp()
+ same => n,NoOp(---- from: ${MESSAGE(from)} body: ${MESSAGE(body)})
+ same => n,MessageSend(sip:${EXTEN:1})
+ same => n,HangUp()
+
+[in-multifon]
+exten => 79260943032,1,NoOp(CallerID: ${CALLERID(all)})
+ same => n,Dial(SIP/2012)
+exten => 79263671662,1,NoOp(CallerID: ${CALLERID(all)})
+ same => n,Dial(SIP/2011)

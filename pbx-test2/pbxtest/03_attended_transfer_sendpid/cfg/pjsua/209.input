@@ -1,0 +1,13 @@
+sleep 5000
+a
+200
+sleep 1000
+m
+sip:201@116.202.25.254:5061
+sleep 2000
+X
+0
+sleep 1000
+h
+sleep 5000
+q
