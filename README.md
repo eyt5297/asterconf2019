@@ -44,9 +44,9 @@ systemctl start docker
 
 ## подготовка pbx_1
 
-mkdir /opt/store && cd /opt/store
+cd /opt
 
-git clone https://github.com/eyt5297/asterconf2019.git 
+git clone https://github.com/eyt5297/asterconf2019.git store
 
 cd pbx-test1
 
@@ -82,9 +82,9 @@ docker exec -it  pbx1 /bin/bash
 
 ## подготовка pbx_2
 
-mkdir /opt/store && cd /opt/store
+cd /opt
 
-git clone https://github.com/eyt5297/asterconf2019.git 
+git clone https://github.com/eyt5297/asterconf2019.git  store
  
 cd pbx-test2
 
