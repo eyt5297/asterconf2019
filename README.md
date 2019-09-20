@@ -136,6 +136,7 @@ docker exec -it pbx2 /bin/bash
 
 
 #поменять ip адрес во всех файла конфигурации
+
 find ./ -type f -exec sed -i -e 's/old_ip_or_domain/new_ip_or_domain/g' {} \;
 
 
