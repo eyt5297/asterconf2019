@@ -45,6 +45,7 @@ systemctl start docker
 ## подготовка pbx_1
 
 mkdir /opt/store && cd /opt/store
+
 git clone https://github.com/eyt5297/asterconf2019.git pbx-test1
 
 ### переходим в рабочу директорию
@@ -75,6 +76,7 @@ docker ps -a
 docker stop pbx1
 или
 docker attach pbx1 
+
 core stop now
 
 ### запустить остановленный 
@@ -89,6 +91,7 @@ docker exec -it  pbx1 /bin/bash
 ## подготовка pbx_2
 
 mkdir /opt/store && cd /opt/store
+
 git clone https://github.com/eyt5297/asterconf2019.git pbx-test2
 
 ### переходим в рабочу директорию
@@ -122,6 +125,7 @@ docker ps -a
 docker stop pbx2
 или
 docker attach pbx2 
+
 core stop now
 
 ### запустить остановленный 
