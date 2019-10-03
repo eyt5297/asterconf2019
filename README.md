@@ -47,7 +47,7 @@ cd /opt
 
 git clone https://github.com/eyt5297/asterconf2019.git store
 
-cd pbx-test1
+cd ./store/pbx-test1
 
 ### Скачиваем образ
 docker pull eyt5297/asterisk16
