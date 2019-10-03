@@ -33,7 +33,6 @@ yum install -y vim tmux tcpdump nmap net-tools git mc tree
  sudo systemctl enable iptables.service \
  sudo systemctl start iptables.service \
  vim /etc/sysconfig/iptables \
- sudo service iptables restart \
  sudo systemctl restart iptables.service 
 
 ### Docker
