@@ -12,8 +12,8 @@ tg: @chan_asterisk
 Создаем два хоста CentoOS 7
 
 ### отключаем SELINUX
-setenforce 0
-sed -i 's/\(^SELINUX=\).*/\SELINUX=disabled/' /etc/sysconfig/selinux
+setenforce 0 &&
+sed -i 's/\(^SELINUX=\).*/\SELINUX=disabled/' /etc/sysconfig/selinux &&
 sed -i 's/\(^SELINUX=\).*/\SELINUX=disabled/' /etc/selinux/config
 
 ### Установка дополнительных пакетов
