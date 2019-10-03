@@ -94,10 +94,10 @@ docker pull eyt5297/asterisk16
 docker images
 
 ### запскаем контейнер cd /opt/store/pbx-test2 
-docker run -it -v $(pwd)/var/spool/asterisk/monitor:/var/spool/asterisk/monitor \\ \
--v $(pwd)/var/log/asterisk:/var/log/asterisk \\ \
--v $(pwd)/var/log/asterisk/cdr-csv:/var/log/asterisk/cdr-csv \\ \
--v $(pwd)/etc/asterisk:/etc/asterisk -v $(pwd)/pbxtest:/opt/store/pbxtest \\ \
+docker run -it -v $(pwd)/var/spool/asterisk/monitor:/var/spool/asterisk/monitor \\\
+-v $(pwd)/var/log/asterisk:/var/log/asterisk \\\
+-v $(pwd)/var/log/asterisk/cdr-csv:/var/log/asterisk/cdr-csv \\\
+-v $(pwd)/etc/asterisk:/etc/asterisk -v $(pwd)/pbxtest:/opt/store/pbxtest \\\
 --net=host -h pbx_2-docker --name pbx2 eyt5297/asterisk16
 
 нажимаем последовательность Ctrl+p, Ctrl+q , чтобы отключиться от контейнера
