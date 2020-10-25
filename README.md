@@ -12,10 +12,11 @@ tg: @chan_asterisk
 Создаем два хоста CentoOS 7
 
 ### отключаем SELINUX
+``` #bash
 setenforce 0 &&
 sed -i 's/\(^SELINUX=\).*/\SELINUX=disabled/' /etc/sysconfig/selinux &&
 sed -i 's/\(^SELINUX=\).*/\SELINUX=disabled/' /etc/selinux/config
-
+```
 ### Установка дополнительных пакетов
 yum install -y vim tmux tcpdump nmap net-tools git mc tree 
 
