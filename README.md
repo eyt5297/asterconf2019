@@ -24,28 +24,28 @@ yum install -y vim tmux tcpdump nmap net-tools git mc tree
 
 ### sngrep 
 ```
- echo "[irontec]" > /etc/yum.repos.d/irontec.repo \
- echo "name=Irontec RPMs repository" >> /etc/yum.repos.d/irontec.repo \
- echo "baseurl=http://packages.irontec.com/centos/\$releasever/\$basearch/" >> /etc/yum.repos.d/irontec.repo \
- rpm --import http://packages.irontec.com/public.key \
+ echo "[irontec]" > /etc/yum.repos.d/irontec.repo 
+ echo "name=Irontec RPMs repository" >> /etc/yum.repos.d/irontec.repo 
+ echo "baseurl=http://packages.irontec.com/centos/\$releasever/\$basearch/" >> /etc/yum.repos.d/irontec.repo 
+ rpm --import http://packages.irontec.com/public.key 
  yum install sngrep -y 
 ```
 
 ### iptables 
 ```
- sudo yum -y install iptables-services \
- systemctl stop firewalld \
- systemctl disable firewalld \
- sudo systemctl enable iptables.service \
- sudo systemctl start iptables.service \
- vim /etc/sysconfig/iptables \
+ sudo yum -y install iptables-services 
+ systemctl stop firewalld 
+ systemctl disable firewalld 
+ sudo systemctl enable iptables.service 
+ sudo systemctl start iptables.service 
+ vim /etc/sysconfig/iptables 
  sudo systemctl restart iptables.service 
 ```
 
 ### Docker
 ```
-yum install -y docker \
-systemctl enable docker \
+yum install -y docker 
+systemctl enable docker 
 systemctl start docker 
 ```
 
