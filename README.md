@@ -67,7 +67,7 @@ docker images
 ```
 ### запскаем контейнер cd /opt/store/pbx-test1 
 ```
-docker run -it 
+docker run -it \
   -v $(pwd)/var/spool/asterisk/monitor:/var/spool/asterisk/monitor \
   -v $(pwd)/var/log/asterisk:/var/log/asterisk \
   -v $(pwd)/var/log/asterisk/cdr-csv:/var/log/asterisk/cdr-csv \
